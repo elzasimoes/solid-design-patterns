@@ -1,5 +1,6 @@
-from pagamento.pagamento_pix import PagamentoPIX
 from pagamento.pagamento_cartao import PagamentoCartao
+from pagamento.pagamento_pix import PagamentoPIX
+
 
 class PagamentoFactory:
     """
@@ -13,6 +14,7 @@ class PagamentoFactory:
         criar_pagamento(tipo): Returns an instance of PagamentoPIX or
         PagamentoCartao based on the provided type.
     """
+
     @staticmethod
     def criar_pagamento(tipo):
         if tipo == "pix":

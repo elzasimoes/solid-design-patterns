@@ -1,5 +1,6 @@
 from pedido.pedido import Pedido
 
+
 class PedidoDelivery(Pedido):
     def __init__(self, cliente, itens, taxa_entrega):
         super().__init__(cliente, itens)
