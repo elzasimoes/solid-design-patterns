@@ -21,6 +21,9 @@ Este projeto implementa um sistema de gerenciamento de pedidos que simula um flu
 - Design Patterns: _Factory Method, Template, Strategy, Facade, Observer_.
 - Princípios **SOLID**.
 
+- Single Responsability - Responsabilidade Única
+- O - Open/Closed Principle (Aberto/Fechado) - do SOLID, que estabelece que uma classe deve ser aberta para extensão, mas fechada para modificações. Isso significa que conseguimos estender a funcionalidade da classe base Pedido ao criar PedidoDelivery, sem alterar a estrutura original da classe base.
+
 ---
 
 ## **Estrutura do Projeto**
