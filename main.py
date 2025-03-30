@@ -6,6 +6,7 @@ from pedido.pedido_retirada import PedidoRetirada
 from pedido.pedido_delivery import PedidoDelivery
 from notificacao.notificacao_email import NotificacaoEmail
 from notificacao.notificacao_sms import NotificacaoSMS
+from notificacao.notificacao_facade import NotificacaoFacade
 
 from pagamento.pagamento_factory import PagamentoFactory
 
@@ -32,5 +33,8 @@ pagamento.processar(valor_pedido)
 
 
 MENSAGEM = "Seu pedido saiu para entrega!"
-notificacao_email = NotificacaoEmail().enviar_notificacao(cliente, MENSAGEM)
-notificacao_sms = NotificacaoSMS().enviar_notificacao(cliente, MENSAGEM)
+#notificacao_email = NotificacaoEmail().enviar_notificacao(cliente, MENSAGEM)
+#notificacao_sms = NotificacaoSMS().enviar_notificacao(cliente, MENSAGEM)
+
+notificacoes = NotificacaoFacade()
+notificacoes.enviar_notificacoes(cliente, MENSAGEM)
